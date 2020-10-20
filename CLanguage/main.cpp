@@ -8,6 +8,7 @@
 
 #include "templates.h"
 #include "conteiners_STL.h"
+#include "lambda.h"
 //#include <execution>
 //#include <filesystem>
 
@@ -164,23 +165,68 @@ public:
 private:
 	char data[1024];
 };
+
+#define SQ(X) X*X
+
+void use_conteiner_STL() 
+{
+	// 1. идиома erase-remove для контейнера std::vector
+	//erase_remove();
+
+	// 2.удаляем элементы из неотсортированного объекта класса std::vector О(1)
+	//use_quick_remove();
+
+	// 4. сохраняем сортировку экземпляров класса stD::vector
+	//sort_vector();
+
+	// 5. вставляем элементы в контейнер std::map эффуктивно и в соответствии с условиями
+	//insert_to_map();
+
+	// 6. исследуем новую семантику подсказок для вставки элементов с помощью метода std::map::insert
+	//new_hint_map();
+
+	// 7. эффективно изменяем ключи элементов std::map
+	//change_key_map();
+
+	// 8. применяем контейнер std::unordered_map для пользовательских типов
+	//use_unordered_map();
+
+	// 9. отсеиваем повторяющиеся слова из пользовательского ввода и выводим их на экран в алфавитном порядке с помощью контейнера std::set
+	//filter_set();
+
+	// 10. простой opn-калькулятор с использование контейнера std::stack
+	//rpn_calculate();
+
+	// 11. подсчитываем частоту встерчаемости слов с применением контейнера std::map
+	//use_filter_punctuation();
+
+	// 12. вспомогателный стилистические редактор для поиска длинных предложений в текстах с помощью std::multimap
+	//use_filter_sentence();
+
+	// 13. личный список текущих дел с помощью std::priority_queue
+	//use_priority_queue();	
+}
+
+void use_lambda() 
+{
+	// 1. использование лямбда выражения до С++11
+	//use_lambda_befor_11();
+
+	// 2. использование лямбда выражения после С++11
+	//use_lambda_after_11();
+
+	// 3. динамическое определние фунеция с помощью лямбда-выражений
+	dinamic_defenition_lambda();
+}
+
 int main(int argv, char* argc[])
 {
-
 	//useConstexpr();
 	//useSvertka();
-	//erase_remove();
-	//use_quick_remove();
-	//sort_vector();
-	//insert_to_map();
-	//new_hint_map();
-	//change_key_map();
-	//use_unordered_map();
-	//filter_set();
-	//rpn_calculate();
-	//use_filter_punctuation();
-	//use_filter_sentence();
-	//use_priority_queue();
+
+	use_conteiner_STL();
+	use_lambda();
+
 
 	system("pause");
 

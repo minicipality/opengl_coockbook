@@ -23,10 +23,10 @@ void erase_remove()
 {
 	std::vector<int> vec{ 1, 2, 3, 4, 5, 3, 2, 4, 4, 5, 2 };
 
-	//const auto new_end(std::remove(std::begin(vec), std::end(vec), 2));
+	const auto new_end(std::remove(std::begin(vec), std::end(vec), 2));
 	
 	const auto odd{ [](int i) {return i % 2 != 0; } };
-	const auto new_end(std::remove_if(std::begin(vec), std::end(vec), odd));
+	//const auto new_end(std::remove_if(std::begin(vec), std::end(vec), odd));
 	
 	vec.erase(new_end, std::end(vec));
 
@@ -152,6 +152,7 @@ void new_hint_map()
 	for (const auto &s : { "z", "y", "x", "w" })
 		insert_it = m.insert(insert_it, { s, 1 });
 	
+	// демонстрация того, как не надо решать задачу
 	m.insert(std::end(m), {"a", 1});
 
 	for (const auto &[key, value] : m)
